@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
@@ -41,6 +43,11 @@ end
 # Use unicorn as the app server
 # gem 'unicorn'
 
+group :production do
+  gem 'thin'
+  gem 'rails_12factor' # heroku assets and logging
+end
+
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
@@ -48,3 +55,4 @@ end
 gem 'debugger', group: [:development, :test]
 
 gem 'mongoid', github: 'mongoid/mongoid'
+
