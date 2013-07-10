@@ -56,3 +56,5 @@ gem 'debugger', group: [:development, :test]
 
 gem 'mongoid', github: 'mongoid/mongoid'
 
+gem 'mongo'
+gem 'bson_ext'
